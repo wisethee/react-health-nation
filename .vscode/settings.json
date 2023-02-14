@@ -1,0 +1,22 @@
+{
+   "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/*.spec.ts": true,
+    "wp-admin": true,
+    "wp-includes": true,
+    "**/uploads": true,
+    "node_modules": true,
+    "tailwind.config.js": true,
+    "package-lock.json": true,
+    "package.json": true,
+    ".gitignore": true,
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "drei",
+    "gsap",
+    "tailwindcss"
+  ],
+}
