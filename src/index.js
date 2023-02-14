@@ -11,6 +11,7 @@ import App from "./app/app";
 import "./styles/tailwind.css";
 import "./styles/main.css";
 
+// Rendering the App component inside the root element
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
