@@ -42,9 +42,22 @@ const SignIn = () => {
         email,
         password
       );
-
       resetFormFields();
-    } catch (error) {}
+    } catch (error) {
+      switch (error.code) {
+        case "auth/wrong-password":
+          // TODO: add modal
+          alert("Wrong password.");
+          break;
+        case "auth/user-not-found":
+          // TODO: add modal
+          alert("User not found.");
+          break;
+        default:
+          alert("Something went wrong.");
+          break;
+      }
+    }
   };
 
   return (
@@ -74,7 +87,7 @@ const SignIn = () => {
           Sign In
         </Button>
 
-        <Button buttonType={"primary"} onClick={logGoogleUser}>
+        <Button type="button" buttonType={"primary"} onClick={logGoogleUser}>
           Google Sign In
         </Button>
       </form>
