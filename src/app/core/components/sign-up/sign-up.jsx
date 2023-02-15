@@ -3,6 +3,8 @@ import { useState } from "react";
 import { createUserDocument } from "../../utils/firebase/db.firebase";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
+import FormInput from "../form-input/form-input";
+
 // default form fields values
 const defaultFormFields = {
   displayName: "",
@@ -34,13 +36,14 @@ const SignUp = () => {
         email,
         password
       );
-      console.log("User created successfully", user);
       await createUserDocument(user, { displayName });
       setFormFields(defaultFormFields);
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
+        // TODO: show error message in a modal
         console.error("User already in use");
       } else {
+        // TODO: show error message in a modal
         console.error("User creation encountered an error", error);
       }
     }
@@ -50,81 +53,40 @@ const SignUp = () => {
     <div className="sign-up">
       <h1>Sign Up with your email and password</h1>
       <form onSubmit={handleSubmit}>
-        <label className="block">
-          <span className="text-gray-700">Display Name</span>
-          <input
-            type="text"
-            className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-            required
-            name="displayName"
-            value={displayName}
-            onChange={handleChange}
-          />
-        </label>
+        <FormInput
+          required
+          type="text"
+          label={"Display Name"}
+          name="displayName"
+          value={displayName}
+          onChange={handleChange}
+        />
+        <FormInput
+          required
+          type="email"
+          label={"Email"}
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
 
-        <label className="block">
-          <span className="text-gray-700">Email</span>
-          <input
-            type="email"
-            className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-            required
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
+        <FormInput
+          required
+          type="password"
+          label={"Password"}
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
 
-        <label className="block">
-          <span className="text-gray-700">Password</span>
-          <input
-            type="password"
-            className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-            required
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-
-        <label className="block">
-          <span className="text-gray-700">Confirm Password</span>
-          <input
-            type="password"
-            className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-            required
-            name="confirmPassword"
-            value={confirmPassword}
-            onChange={handleChange}
-          />
-        </label>
+        <FormInput
+          required
+          type="password"
+          label={"Confirm Password"}
+          name="confirmPassword"
+          value={confirmPassword}
+          onChange={handleChange}
+        />
 
         <button type="submit">Sign Up</button>
       </form>
