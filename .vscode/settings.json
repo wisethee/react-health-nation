@@ -7,7 +7,7 @@
     "wp-includes": true,
     "**/uploads": true,
     "node_modules": true,
-    "tailwind.config.js": false,
+    "tailwind.config.js": true,
     "package-lock.json": true,
     "package.json": true,
     ".gitignore": true,
