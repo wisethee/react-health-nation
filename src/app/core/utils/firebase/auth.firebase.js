@@ -1,5 +1,10 @@
 import { firebaseApp } from "./init.firebase";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 
 // export the auth object from firebase
 export const auth = getAuth(firebaseApp);
@@ -14,3 +19,11 @@ googleProvider.setCustomParameters({ prompt: "select_account" });
 // and ask the user to sign in with their Google account
 export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleProvider);
+
+// createUserWithEmailAndPassword is a function that will create a new user
+// with the email and password provided
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  // if the email or password are not provided, return
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
+};

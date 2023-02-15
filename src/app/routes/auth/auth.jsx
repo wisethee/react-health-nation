@@ -1,7 +1,8 @@
 import { Fragment } from "react";
-import SignUp from "../../core/components/sign-up/sign-up";
 import { signInWithGooglePopup } from "../../core/utils/firebase/auth.firebase";
 import { createUserDocument } from "../../core/utils/firebase/db.firebase";
+
+import SignUp from "../../core/components/sign-up/sign-up";
 
 const Auth = () => {
   const logGoogleUser = async () => {
@@ -11,8 +12,8 @@ const Auth = () => {
 
   return (
     <Fragment>
-      <button onClick={logGoogleUser}>Google Login</button>
       <SignUp />
+      <button onClick={logGoogleUser}>Google Login</button>
     </Fragment>
   );
 };
