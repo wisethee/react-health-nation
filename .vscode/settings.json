@@ -15,8 +15,13 @@
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "cSpell.words": [
+    "appspot",
     "drei",
+    "Dwvscyiw",
+    "firebaseapp",
+    "firestore",
     "gsap",
+    "Nunito",
     "tailwindcss"
   ],
 }
