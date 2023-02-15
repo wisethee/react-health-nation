@@ -7,7 +7,7 @@
     "wp-includes": true,
     "**/uploads": true,
     "node_modules": true,
-    "tailwind.config.js": true,
+    "tailwind.config.js": false,
     "package-lock.json": true,
     "package.json": true,
     ".gitignore": true,
@@ -17,6 +17,7 @@
   "cSpell.words": [
     "drei",
     "gsap",
+    "Nunito",
     "tailwindcss"
   ],
 }
