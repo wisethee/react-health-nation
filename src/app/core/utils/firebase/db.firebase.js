@@ -3,7 +3,7 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 export const db = getFirestore(firebaseApp);
 
-export const createUserDocumentFromAuth = async (user) => {
+export const createUserDocument = async (user) => {
   const userRef = doc(db, "users", user.uid);
   const userDoc = await getDoc(userRef);
 
