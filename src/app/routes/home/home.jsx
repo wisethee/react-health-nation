@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+import Hero from "../../core/components/hero/hero";
+
 const Home = () => {
-  return <div className="home">Home</div>;
+  return (
+    <Fragment>
+      <Hero />
+    </Fragment>
+  );
 };
 
 export default Home;
