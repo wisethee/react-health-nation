@@ -91,7 +91,7 @@ const SignUp = () => {
         />
 
         <Button type="submit" buttonType={"primary"}>
-          Test
+          Sign Up
         </Button>
       </form>
     </div>
