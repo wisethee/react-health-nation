@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./core/layout/header/header";
 import Footer from "./core/layout/footer/footer";
 import Main from "./core/layout/main/main";
+import Auth from "./routes/auth/auth";
 import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Main />}>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
         </Route>
       </Routes>
 
