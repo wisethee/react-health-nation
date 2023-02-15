@@ -4,6 +4,7 @@ import { createUserDocument } from "../../utils/firebase/db.firebase";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
 import FormInput from "../form-input/form-input";
+import Button from "../button/button";
 
 // default form fields values
 const defaultFormFields = {
@@ -51,7 +52,8 @@ const SignUp = () => {
 
   return (
     <div className="sign-up">
-      <h1>Sign Up with your email and password</h1>
+      <h2>Don't have and account?</h2>
+      <span>Sign Up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           required
@@ -88,7 +90,9 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Sign Up</button>
+        <Button type="submit" buttonType={"primary"}>
+          Test
+        </Button>
       </form>
     </div>
   );
