@@ -17,7 +17,7 @@ const Header = () => {
           <div className=''>
             <Button buttonType={'transparent'}>
               Log in
-              <span className='' aria-hidden='true'>
+              <span className='pl-2' aria-hidden='true'>
                 &rarr;
               </span>
             </Button>
