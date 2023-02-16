@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 // Importing the BrowserRouter component from react-router-dom
 import { BrowserRouter } from "react-router-dom";
 
-import { UserProvider } from "./app/contexts/user";
+import { UserProvider } from "./app/core/contexts/user";
 
 // Importing the App component
 import App from "./app/app";

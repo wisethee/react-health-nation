@@ -1,15 +1,20 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { signOutAuthUser } from "../../utils/firebase/auth.firebase";
+
+import { UserContext } from "../../contexts/user";
+
 import logo from "../../../../assets/logo.svg";
 import Button from "../../components/button/button";
 
-import { UserContext } from "../../../contexts/user";
-
 const Header = () => {
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
-  console.log("currentUser", currentUser);
+  const signOutHandler = async () => {
+    await signOutAuthUser();
+    setCurrentUser(null);
+  };
 
   return (
     <header className="">
@@ -24,8 +29,8 @@ const Header = () => {
 
           {currentUser ? (
             <div className="">
-              <Button buttonType={"transparent"}>
-                Logout
+              <Button buttonType={"transparent"} onClick={signOutHandler}>
+                Sign out
                 <span className="pl-2" aria-hidden="true">
                   &rarr;
                 </span>

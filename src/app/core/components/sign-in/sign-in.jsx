@@ -5,7 +5,7 @@ import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.fi
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
-import { UserContext } from "../../../contexts/user";
+import { UserContext } from "../../contexts/user";
 
 // default form fields values
 const defaultFormFields = {
