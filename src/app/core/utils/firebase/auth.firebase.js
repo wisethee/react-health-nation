@@ -36,5 +36,7 @@ export const signOutAuthUser = async () => await signOut(auth);
 
 // onAuthStateChanged is a function that will listen for any changes in the
 // authentication state of the user
-export const onAuthStateChangedListener = (callback) =>
+export const onAuthStateChangedListener = (callback) => {
+  if (!callback) return;
   onAuthStateChanged(auth, callback);
+};
