@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 // export the auth object from firebase
@@ -32,3 +33,8 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 };
 
 export const signOutAuthUser = async () => await signOut(auth);
+
+// onAuthStateChanged is a function that will listen for any changes in the
+// authentication state of the user
+export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);
