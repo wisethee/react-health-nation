@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
 import FormInput from "../form-input/form-input";
@@ -11,9 +11,10 @@ const defaultFormFields = {
   password: "",
 };
 
-const SignIn = () => {
+const SignIn = ({ className }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+  const navigate = useNavigate();
 
   // function that will be called when the user types in the input field
   const handleChange = (event) => {
@@ -29,11 +30,9 @@ const SignIn = () => {
     event.preventDefault();
 
     try {
-      const { user } = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
+      navigate("/");
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
@@ -52,7 +51,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="sign-up">
+    <div className={`sign-up ${className}`}>
       <h2>Already have and account?</h2>
       <span>Sign In with your email and password</span>
       <form onSubmit={handleSubmit}>
