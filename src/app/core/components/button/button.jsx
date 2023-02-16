@@ -1,5 +1,5 @@
 const BUTTON_TYPE_CLASSES = {
-  primary: "bg-primary",
+  primary: "bg-primary text-white",
   secondary: "bg-secondary",
   tertiary: "bg-tertiary-container",
   transparent: "transparent",
