@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-import {
-  signInWithGooglePopup,
-  signInAuthUserWithEmailAndPassword,
-} from "../../utils/firebase/auth.firebase";
-import { createUserDocument } from "../../utils/firebase/db.firebase";
+import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
@@ -18,11 +14,6 @@ const defaultFormFields = {
 const SignIn = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocument(user);
-  };
 
   // function that will be called when the user types in the input field
   const handleChange = (event) => {
@@ -85,10 +76,6 @@ const SignIn = () => {
 
         <Button type="submit" buttonType={"primary"}>
           Sign In
-        </Button>
-
-        <Button type="button" buttonType={"primary"} onClick={logGoogleUser}>
-          Google Sign In
         </Button>
       </form>
     </div>
