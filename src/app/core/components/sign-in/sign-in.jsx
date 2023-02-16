@@ -53,7 +53,9 @@ const SignIn = ({ className }) => {
   return (
     <div className={`sign-up ${className}`}>
       <h2 className="text-headline-medium">Already have and account?</h2>
-      <span className="mb-12">Sign In with your email and password</span>
+      <span className="mb-12 opacity-60">
+        Sign In with your email and password
+      </span>
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 items-start">
         <FormInput
           required

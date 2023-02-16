@@ -1,6 +1,6 @@
 const FormInput = ({ label, ...otherProps }) => {
   return (
-    <label className="flex flex-col w-full text-on-surface-variant">
+    <label className="flex flex-col w-full text-on-surface-variant opacity-60">
       <span className="text-gray-700">{label}</span>
       <input
         type="text"
