@@ -1,7 +1,7 @@
 const BUTTON_TYPE_CLASSES = {
   primary: 'bg-primary',
   secondary: 'bg-secondary',
-  tertiary: 'bg-tertiary',
+  tertiary: 'bg-tertiary-container',
   transparent: 'transparent',
 };
 
