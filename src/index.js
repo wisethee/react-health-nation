@@ -4,6 +4,8 @@ import ReactDOM from "react-dom/client";
 // Importing the BrowserRouter component from react-router-dom
 import { BrowserRouter } from "react-router-dom";
 
+import { UserProvider } from "./app/contexts/user";
+
 // Importing the App component
 import App from "./app/app";
 
@@ -16,7 +18,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
