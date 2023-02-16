@@ -1,11 +1,9 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
-
-import { UserContext } from "../../contexts/user";
 
 // default form fields values
 const defaultFormFields = {
@@ -16,8 +14,6 @@ const defaultFormFields = {
 const SignIn = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  const { setCurrentUser } = useContext(UserContext);
 
   // function that will be called when the user types in the input field
   const handleChange = (event) => {
@@ -37,7 +33,6 @@ const SignIn = () => {
         email,
         password
       );
-      setCurrentUser(user);
       resetFormFields();
     } catch (error) {
       switch (error.code) {

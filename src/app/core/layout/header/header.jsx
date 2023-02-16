@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { signOutAuthUser } from "../../utils/firebase/auth.firebase";
 
@@ -9,12 +9,9 @@ import logo from "../../../../assets/logo.svg";
 import Button from "../../components/button/button";
 
 const Header = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
 
-  const signOutHandler = async () => {
-    await signOutAuthUser();
-    setCurrentUser(null);
-  };
+  const navigate = useNavigate();
 
   return (
     <header className="">
@@ -29,7 +26,7 @@ const Header = () => {
 
           {currentUser ? (
             <div className="">
-              <Button buttonType={"transparent"} onClick={signOutHandler}>
+              <Button buttonType={"transparent"} onClick={signOutAuthUser}>
                 Sign out
                 <span className="pl-2" aria-hidden="true">
                   &rarr;
@@ -38,7 +35,10 @@ const Header = () => {
             </div>
           ) : (
             <div className="">
-              <Button buttonType={"transparent"}>
+              <Button
+                buttonType={"transparent"}
+                onClick={() => navigate("/auth")}
+              >
                 Log in
                 <span className="pl-2" aria-hidden="true">
                   &rarr;
