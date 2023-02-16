@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { createUserDocument } from "../../utils/firebase/db.firebase";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
+import { UserContext } from "../../../contexts/user";
+
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
-// default form fields values
+// default sign up form fields values
 const defaultFormFields = {
   displayName: "",
   email: "",
@@ -17,6 +19,8 @@ const defaultFormFields = {
 const SignUp = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+
+  const { setCurrentUser } = useContext(UserContext);
 
   // function that will be called when the user types in the input field
   const handleChange = (event) => {
@@ -37,6 +41,9 @@ const SignUp = () => {
         email,
         password
       );
+
+      setCurrentUser(user);
+
       await createUserDocument(user, { displayName });
       setFormFields(defaultFormFields);
     } catch (error) {

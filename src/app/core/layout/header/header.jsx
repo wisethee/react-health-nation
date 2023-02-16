@@ -9,7 +9,7 @@ import { UserContext } from "../../../contexts/user";
 const Header = () => {
   const { currentUser } = useContext(UserContext);
 
-  console.log(currentUser);
+  console.log("currentUser", currentUser);
 
   return (
     <header className="">
@@ -22,14 +22,25 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="">
-            <Button buttonType={"transparent"}>
-              Log in
-              <span className="pl-2" aria-hidden="true">
-                &rarr;
-              </span>
-            </Button>
-          </div>
+          {currentUser ? (
+            <div className="">
+              <Button buttonType={"transparent"}>
+                Logout
+                <span className="pl-2" aria-hidden="true">
+                  &rarr;
+                </span>
+              </Button>
+            </div>
+          ) : (
+            <div className="">
+              <Button buttonType={"transparent"}>
+                Log in
+                <span className="pl-2" aria-hidden="true">
+                  &rarr;
+                </span>
+              </Button>
+            </div>
+          )}
         </nav>
       </div>
     </header>
