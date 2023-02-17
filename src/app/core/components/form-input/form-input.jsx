@@ -1,6 +1,6 @@
 const FormInput = ({ label, ...otherProps }) => {
   return (
-    <label className="block">
+    <label className="flex flex-col w-full text-on-surface-variant opacity-60">
       <span className="text-gray-700">{label}</span>
       <input
         type="text"
@@ -9,8 +9,8 @@ const FormInput = ({ label, ...otherProps }) => {
                     block
                     w-full
                     px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
+                    border-0 border-b-2 border-secondary-container
+                    focus:ring-0 focus:border-secondary
                   "
         {...otherProps}
       />

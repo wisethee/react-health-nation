@@ -8,3 +8,8 @@ body {
   background-color: #f9f9f9;
   height: 100%;
 }
+
+canvas {
+  touch-action: none;
+  min-height: 690px;
+}

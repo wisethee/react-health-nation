@@ -12,15 +12,15 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      primary: "#006970",
+      primary: "#19ABB5",
       "on-primary": "#ffffff",
       "primary-container": "#7af4ff",
       "on-primary-container": "#002022",
-      secondary: "#4a6365",
+      secondary: "#96b0b2",
       "on-secondary": "#ffffff",
       "secondary-container": "#cce8ea",
       "on-secondary-container": "#051f21",
-      tertiary: "#4f5f7d",
+      tertiary: "#9cabcd",
       "on-tertiary": "#ffffff",
       "tertiary-container": "#d7e2ff",
       "on-tertiary-container": "#0a1b36",
@@ -28,10 +28,11 @@ module.exports = {
       "on-error-container": "#410002",
       surface: "#fafdfc",
       "on-surface": "#191c1c",
-      "surface-container": "#dae4e5",
-      "on-surface-container": "#3f4849",
+      "surface-variant": "#dae4e5",
+      "on-surface-variant": "#3f4849",
       black: "#000000",
       white: "#ffffff",
+      transparent: "transparent",
     },
     fontSize: {
       "body-small": [
@@ -71,7 +72,7 @@ module.exports = {
         {
           lineHeight: "1.5rem",
           letterSpacing: "0.06em",
-          fontWeight: "500",
+          fontWeight: "600",
         },
       ],
       "label-large": [

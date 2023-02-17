@@ -6,7 +6,7 @@ import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.fi
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
-// default form fields values
+// default sign up form fields values
 const defaultFormFields = {
   displayName: "",
   email: "",
@@ -14,7 +14,7 @@ const defaultFormFields = {
   confirmPassword: "",
 };
 
-const SignUp = () => {
+const SignUp = ({ className }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
@@ -37,6 +37,7 @@ const SignUp = () => {
         email,
         password
       );
+
       await createUserDocument(user, { displayName });
       setFormFields(defaultFormFields);
     } catch (error) {
@@ -51,10 +52,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="sign-up">
-      <h2>Don't have and account?</h2>
-      <span>Sign Up with your email and password</span>
-      <form onSubmit={handleSubmit}>
+    <div className={`sign-up ${className}`}>
+      <h2 className="text-headline-medium">Don't have and account?</h2>
+      <span className="mb-12 opacity-60">
+        Sign Up with your email and password
+      </span>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-6 items-start">
         <FormInput
           required
           type="text"
