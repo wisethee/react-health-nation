@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signOutAuthUser } from "../../utils/firebase/auth.firebase";
@@ -6,7 +5,6 @@ import { UserContext } from "../../contexts/user";
 
 import Button from "../../components/button/button";
 import { ReactComponent as Logo } from "../../../../assets/logo.svg";
-import './header.css'
 
 const Header = () => {
   const { currentUser } = useContext(UserContext);
