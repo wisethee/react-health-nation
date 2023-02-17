@@ -4,28 +4,11 @@ import {
   Float,
   PresentationControls,
 } from "@react-three/drei";
-import { useControls } from "leva";
 import { Fragment, Suspense } from "react";
+
 import Heart from "../heart/heart";
 
 const Scene = () => {
-  const { position, rotation } = useControls({
-    position: {
-      value: {
-        x: 0,
-        y: -0.8,
-        z: 0,
-      },
-    },
-    rotation: {
-      value: {
-        x: -0.1,
-        y: 0.1,
-        z: -0.15,
-      },
-    },
-  });
-
   return (
     <Fragment>
       <Environment preset="dawn" />
@@ -47,10 +30,7 @@ const Scene = () => {
           snap={{ mass: 4, tension: 400 }}
         >
           <Float rotationIntensity={0.4}>
-            <Heart
-              position={[position.x, position.y, position.z]}
-              rotation={[rotation.x, rotation.y, rotation.z]}
-            />
+            <Heart position={[0, -0.8, 0]} rotation={[-0.1, 0.1, -0.15]} />
           </Float>
         </PresentationControls>
       </Suspense>
