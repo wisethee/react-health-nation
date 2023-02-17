@@ -20,8 +20,13 @@ const Header = () => {
   return (
     <header className="header main flex flex-col px-4 md:px-8 lg:px-12 xl:px-16">
       <div className="flex justify-between items-center min-h-[7rem]">
-        <div>
-          <Logo />
+        <div className="logo">
+          <Link to="/" className="flex gap-2 items-center">
+            <Logo />
+            <span className="hidden sm:flex text-headline-small">
+              Health Nation
+            </span>
+          </Link>
         </div>
 
         <nav className="" aria-label="Global">
