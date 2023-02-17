@@ -1,10 +1,11 @@
 import { firebaseApp } from "./init.firebase";
 import {
   getAuth,
-  signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 // export the auth object from firebase
@@ -15,11 +16,6 @@ const googleProvider = new GoogleAuthProvider();
 
 // set the custom parameters, in this case we are asking for the user's email
 googleProvider.setCustomParameters({ prompt: "select_account" });
-
-// signInWithGooglePopup is a function that will open a popup window
-// and ask the user to sign in with their Google account
-export const signInWithGooglePopup = () =>
-  signInWithPopup(auth, googleProvider);
 
 // createUserWithEmailAndPassword is a function that will create a new user
 // with the email and password provided
@@ -34,4 +30,13 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   // if the email or password are not provided, return
   if (!email || !password) return;
   return await signInWithEmailAndPassword(auth, email, password);
+};
+
+export const signOutAuthUser = async () => await signOut(auth);
+
+// onAuthStateChanged is a function that will listen for any changes in the
+// authentication state of the user
+export const onAuthStateChangedListener = (callback) => {
+  if (!callback) return;
+  onAuthStateChanged(auth, callback);
 };

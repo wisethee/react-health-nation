@@ -1,10 +1,6 @@
 import { useState } from "react";
-
-import {
-  signInWithGooglePopup,
-  signInAuthUserWithEmailAndPassword,
-} from "../../utils/firebase/auth.firebase";
-import { createUserDocument } from "../../utils/firebase/db.firebase";
+import { useNavigate } from "react-router-dom";
+import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.firebase";
 
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
@@ -15,14 +11,10 @@ const defaultFormFields = {
   password: "",
 };
 
-const SignIn = () => {
+const SignIn = ({ className }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocument(user);
-  };
+  const navigate = useNavigate();
 
   // function that will be called when the user types in the input field
   const handleChange = (event) => {
@@ -38,11 +30,9 @@ const SignIn = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
+      navigate("/");
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
@@ -61,10 +51,12 @@ const SignIn = () => {
   };
 
   return (
-    <div className="sign-up">
-      <h2>Already have and account?</h2>
-      <span>Sign In with your email and password</span>
-      <form onSubmit={handleSubmit}>
+    <div className={`sign-up ${className}`}>
+      <h2 className="text-headline-medium">Already have and account?</h2>
+      <span className="mb-12 opacity-60">
+        Sign In with your email and password
+      </span>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-6 items-start">
         <FormInput
           required
           type="email"
@@ -85,10 +77,6 @@ const SignIn = () => {
 
         <Button type="submit" buttonType={"primary"}>
           Sign In
-        </Button>
-
-        <Button type="button" buttonType={"primary"} onClick={logGoogleUser}>
-          Google Sign In
         </Button>
       </form>
     </div>

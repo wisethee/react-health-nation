@@ -8,6 +8,7 @@ import Main from "./core/layout/main/main";
 import Auth from "./routes/auth/auth";
 import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
+import Experimental from "./routes/experimental/experimental";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/experimental" element={<Experimental />} />
         </Route>
       </Routes>
 
