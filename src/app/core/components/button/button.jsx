@@ -3,8 +3,6 @@ const BUTTON_TYPE_CLASSES = {
   secondary: "bg-secondary-container",
   tertiary: "bg-tertiary-container",
   transparent: "transparent",
-  grey: "bg-light-grey",
-  orange: "bg-light-orange",
 };
 
 const Button = ({
