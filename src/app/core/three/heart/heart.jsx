@@ -9,8 +9,8 @@ const Heart = (props) => {
         receiveShadow
         geometry={nodes.node_id5.geometry}
         material={materials["32"]}
-        position={[0, -0.26, 0.28]}
-        scale={0.08}
+        position={[0, -0.5, 0.28]}
+        scale={0.12}
       />
     </group>
   );

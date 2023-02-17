@@ -11,5 +11,5 @@ body {
 
 canvas {
   touch-action: none;
-  min-height: 690px;
+  /* min-height: 690px; */
 }

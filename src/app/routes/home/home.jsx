@@ -6,15 +6,14 @@ import DATA from "../../data/data.json";
 const Home = () => {
   return (
     <Fragment>
-      {DATA.map(({ id, title, description, imageUrl, order, btnColor }) => {
+      {DATA.map(({ id, title, description, order, btnColor }) => {
         return (
           <Section
             key={id}
             title={title}
             description={description}
-            img={imageUrl}
-            order={order}
             btnColor={btnColor}
+            order={order}
           />
         );
       })}
