@@ -1,31 +1,29 @@
-import Button from '../../components/button/button';
+import Button from "../../components/button/button";
 
-const Section = ({ img, order, justify, btnColor }) => {
+const Section = ({ title, description, img, order, btnColor }) => {
   return (
-    <section className='container mx-auto px-6 md:px-0 p-20 flex items-center gap-x-20 cause'>
+    <section className="mx-auto px-6 md:px-0 p-20 flex items-center gap-x-20 cause">
       <div className={`w-full ${order}`}>
-        <div className='text-left'>
-          <h2 className='text-headline-large tracking-tight'>
-            Lorem ipsum dolor sit amet consectetur
-          </h2>
-          <p className='mt-6 text-body-medium leading-8'>
-            Lorem ipsum dolor sit amet consectetur. Quis viverra augue sit eros at lacus dis
-            egestas. Sit amet ultrices blandit vitae nunc ullamcorper malesuada. Blandit imperdiet
-            egestas non id. Augue tempus volutpat erat mi nunc sed sem elementum.
-          </p>
-          <div className='mt-10 flex'>
-            <Button buttonType={btnColor} textTransform={'uppercase'} shadow={'shadow-sm'}>
+        <div className="text-left">
+          <h2 className="text-headline-large tracking-tight">{title}</h2>
+          <p className="mt-6 text-body-medium leading-8">{description}</p>
+          <div className="mt-10 flex">
+            <Button
+              buttonType={btnColor}
+              textTransform={"uppercase"}
+              shadow={"shadow-sm"}
+            >
               Donate now
-              <span className='pl-2' aria-hidden='true'>
+              <span className="pl-2" aria-hidden="true">
                 &rarr;
               </span>
             </Button>
           </div>
         </div>
       </div>
-      <div className='w-full'>
-        <div className={`flex ${justify}`}>
-          <img src={img} alt='Img placeholder' />
+      <div className="w-full">
+        <div className="flex">
+          <img src={img} alt="Img placeholder" />
         </div>
       </div>
     </section>

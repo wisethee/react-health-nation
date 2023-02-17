@@ -1,23 +1,29 @@
 [
   {
     "id": 1,
-    "name": "Charity 1",
+    "title": "Charity 1",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-    "donate": 25
+    "donate": 25,
+    "order": "order-first",
+    "btnColor": "primary"
   },
   {
     "id": 2,
-    "name": "Charity 1",
+    "title": "Charity 1",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
-    "donate": 18
+    "donate": 18,
+    "order": "order-last",
+    "btnColor": "secondary"
   },
   {
     "id": 3,
-    "name": "Charity 1",
+    "title": "Charity 1",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
-    "donate": 35
+    "donate": 35,
+    "order": "order-first",
+    "btnColor": "tertiary"
   }
 ]
