@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "title": "Charity 1",
+    "title": "Charity 2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
     "donate": 18,
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "title": "Charity 1",
+    "title": "Charity 3",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
     "donate": 35,

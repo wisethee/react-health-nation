@@ -29,7 +29,7 @@ const Scene = () => {
           config={{ mass: 2, tension: 400 }}
           snap={{ mass: 4, tension: 400 }}
         >
-          <Float rotationIntensity={0.4}>
+          <Float rotationIntensity={0.9}>
             <Heart position={[0, -0.8, 0]} rotation={[-0.1, 0.1, -0.15]} />
           </Float>
         </PresentationControls>
