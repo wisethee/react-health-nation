@@ -16,9 +16,9 @@ const Header = () => {
   };
 
   return (
-    <header className="">
-      <div className="container mx-auto">
-        <nav className="" aria-label="Global">
+    <header className="flex px-4 md:px-8 lg:px-12 xl:px-16 ">
+      <div className="container mx-auto ">
+        <nav className="flex justify-between items-center" aria-label="Global">
           <div className="">
             <Link className="" to="/">
               <span className="sr-only">Health Nation</span>
