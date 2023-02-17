@@ -4,6 +4,8 @@ import { signOutAuthUser } from "../../utils/firebase/auth.firebase";
 import { UserContext } from "../../contexts/user";
 
 import Button from "../../components/button/button";
+
+// Assets
 import { ReactComponent as Logo } from "../../../../assets/logo.svg";
 
 const Header = () => {
@@ -16,16 +18,13 @@ const Header = () => {
   };
 
   return (
-    <header className="">
-      <div className="container mx-auto">
-        <nav className="" aria-label="Global">
-          <div className="">
-            <Link className="" to="/">
-              <span className="sr-only">Health Nation</span>
-              <Logo className="" />
-            </Link>
-          </div>
+    <header className="header main flex flex-col px-4 md:px-8 lg:px-12 xl:px-16">
+      <div className="flex justify-between items-center min-h-[7rem]">
+        <div>
+          <Logo />
+        </div>
 
+        <nav className="" aria-label="Global">
           {currentUser ? (
             <div className="">
               <Button
