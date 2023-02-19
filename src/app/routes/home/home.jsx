@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Section from "../../core/components/section/section";
+import About from "../../core/components/about/about";
 
 import DATA from "../../data/data.json";
 
@@ -31,6 +32,7 @@ const Home = () => {
           );
         }
       )}
+      <About btnColor={"secondary"} />
     </Fragment>
   );
 };
