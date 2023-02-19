@@ -1,18 +1,27 @@
 import { Canvas } from "@react-three/fiber";
 import Scene from "../../three/scene/scene";
+import Heading from "../heading/heading";
 import Button from "../button/button";
 
 import "./section.css";
 
-const Section = ({ title, description, order, btnColor }) => {
+const Section = ({
+  title,
+  description,
+  order,
+  btnColor,
+  headingSize,
+  sectionHeight,
+  sectionPadding,
+}) => {
   console.log(order);
   return (
-    <section className="flex py-8">
+    <section className={`flex items-center ${sectionPadding} ${sectionHeight}`}>
       <div
         className={`flex flex-col w-full md:w-1/2 justify-center items-start gap-12 ${order}`}
       >
         <div className="flex flex-col gap-4">
-          <h1 className="text-display-medium">{title}</h1>
+          <Heading priority={headingSize}>{title}</Heading>
           <p>{description}</p>
         </div>
 

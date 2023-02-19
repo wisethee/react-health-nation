@@ -6,7 +6,10 @@
     "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
     "donate": 25,
     "order": "order-first",
-    "btnColor": "primary"
+    "btnColor": "primary",
+    "headingSize": "h1",
+    "sectionHeight": "h-screen",
+    "sectionPadding": "py-0"
   },
   {
     "id": 2,
@@ -15,7 +18,10 @@
     "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
     "donate": 18,
     "order": "order-last",
-    "btnColor": "secondary"
+    "btnColor": "secondary",
+    "headingSize": "h2",
+    "sectionHeight": "h-full",
+    "sectionPadding": "py-8"
   },
   {
     "id": 3,
@@ -24,6 +30,9 @@
     "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
     "donate": 35,
     "order": "order-first",
-    "btnColor": "tertiary"
+    "btnColor": "tertiary",
+    "headingSize": "h2",
+    "sectionHeight": "h-full",
+    "sectionPadding": "py-8"
   }
 ]

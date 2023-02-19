@@ -6,17 +6,31 @@ import DATA from "../../data/data.json";
 const Home = () => {
   return (
     <Fragment>
-      {DATA.map(({ id, title, description, order, btnColor }) => {
-        return (
-          <Section
-            key={id}
-            title={title}
-            description={description}
-            btnColor={btnColor}
-            order={order}
-          />
-        );
-      })}
+      {DATA.map(
+        ({
+          id,
+          title,
+          description,
+          order,
+          btnColor,
+          headingSize,
+          sectionHeight,
+          sectionPadding,
+        }) => {
+          return (
+            <Section
+              key={id}
+              title={title}
+              description={description}
+              btnColor={btnColor}
+              order={order}
+              headingSize={headingSize}
+              sectionHeight={sectionHeight}
+              sectionPadding={sectionPadding}
+            />
+          );
+        }
+      )}
     </Fragment>
   );
 };
