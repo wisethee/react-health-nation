@@ -1,12 +1,10 @@
 import { Fragment } from "react";
-import { Leva } from "leva";
 import { Canvas } from "@react-three/fiber";
 import Scene from "../../core/three/scene/scene";
 
 const Experimental = () => {
   return (
     <Fragment>
-      <Leva collapsed />
       <Canvas
         shadows
         camera={{
