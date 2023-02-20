@@ -10,12 +10,13 @@ const Donate = () => {
   const params = useParams();
   const project = DATA.find((project) => project.id === parseInt(params.id));
 
-  const { title, description, order, btnColor, bgClass, info } = project;
+  const { title, obj, description, order, btnColor, bgClass, info } = project;
 
   return (
     <Fragment>
       <Cause
         title={title}
+        obj={obj}
         description={description}
         btnColor={btnColor}
         order={order}
