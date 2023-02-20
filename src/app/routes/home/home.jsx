@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Section from "../../core/components/section/section";
+import Cause from "../../core/components/cause/cause";
 import About from "../../core/components/about/about";
 
 import DATA from "../../data/data.json";
@@ -17,9 +17,10 @@ const Home = () => {
           headingSize,
           sectionHeight,
           sectionPadding,
+          bgClass,
         }) => {
           return (
-            <Section
+            <Cause
               key={id}
               title={title}
               description={description}
@@ -28,6 +29,8 @@ const Home = () => {
               headingSize={headingSize}
               sectionHeight={sectionHeight}
               sectionPadding={sectionPadding}
+              bgClass={bgClass}
+              id={id}
             />
           );
         }
