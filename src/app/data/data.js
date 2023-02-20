@@ -36,7 +36,7 @@ export const DATA = [
   {
     id: 2,
     title: "Charity Cause 2",
-    obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.1, 0.1, -0.15]} />,
+    obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.3, 0.3, -0.6]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     order: "order-last",
