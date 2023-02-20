@@ -10,13 +10,18 @@ const Footer = () => {
         <Logo style={{ width: 64, height: 64 }} />
       </div>
       <div className="flex justify-center items-center mb-9">
-        <a href="#!" className="mr-9">
+        <a href="#!" className="mr-9" rel="noreferrer" target="_blank">
           <Facebook />
         </a>
-        <a href="#!" className="mr-9">
+        <a
+          href="https://github.com/wisethee/react-health-nation"
+          className="mr-9"
+          rel="noreferrer"
+          target="_blank"
+        >
           <Github />
         </a>
-        <a href="#!">
+        <a href="#!" rel="noreferrer" target="_blank">
           <Instagram />
         </a>
       </div>
