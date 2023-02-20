@@ -11,6 +11,7 @@ const Home = () => {
         ({
           id,
           title,
+          obj,
           description,
           order,
           btnColor,
@@ -23,6 +24,7 @@ const Home = () => {
             <Cause
               key={id}
               title={title}
+              obj={obj}
               description={description}
               btnColor={btnColor}
               order={order}

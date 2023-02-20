@@ -1,16 +1,18 @@
+import Heart from "../core/three/heart/heart";
+import Cell from "../core/three/cell/cell";
+import Brain from "../core/three/brain/brain";
+
 export const DATA = [
   {
     id: 1,
     title: "Charity Cause 1",
+    obj: <Heart />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
-    imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-    donate: 25,
     order: "md:order-first",
     btnColor: "tertiary",
     headingSize: "h1",
     sectionHeight: "hero",
-    sectionPadding: "py-0",
     bgClass: "charity1-bg",
     info: [
       {
@@ -34,15 +36,13 @@ export const DATA = [
   {
     id: 2,
     title: "Charity Cause 2",
+    obj: <Cell />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
-    imageUrl: "https://i.ibb.co/ypkgK0X/blue-beanie.png",
-    donate: 18,
     order: "order-last",
     btnColor: "secondary",
     headingSize: "h2",
     sectionHeight: "h-full",
-    sectionPadding: "py-8",
     bgClass: "charity2-bg",
     info: [
       {
@@ -66,15 +66,13 @@ export const DATA = [
   {
     id: 3,
     title: "Charity Cause 3",
+    obj: <Brain />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
-    imageUrl: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
-    donate: 35,
     order: "md:order-first",
     btnColor: "tertiary",
     headingSize: "h2",
     sectionHeight: "h-full",
-    sectionPadding: "py-8",
     bgClass: "charity3-bg",
     info: [
       {
