@@ -8,6 +8,7 @@ import { UserProvider } from "./app/core/contexts/user";
 
 // Importing the App component
 import App from "./app/app";
+import ScrollToTop from "./app/core/layout/scroll/scroll";
 
 // Importing the main CSS files
 import "./styles/tailwind.css";
@@ -19,6 +20,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
+        <ScrollToTop />
         <App />
       </UserProvider>
     </BrowserRouter>

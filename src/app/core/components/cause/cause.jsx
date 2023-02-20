@@ -15,6 +15,7 @@ const Cause = ({
   headingSize,
   sectionHeight,
   bgClass,
+  obj,
   id,
 }) => {
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ const Cause = ({
           position: [-3, 3, 2],
         }}
       >
-        <Scene />
+        <Scene obj={obj} />
       </Canvas>
     </Section>
   );
