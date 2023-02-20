@@ -10,7 +10,7 @@ const Heart = (props) => {
         geometry={nodes.node_id5.geometry}
         material={materials["32"]}
         position={[0, -0.5, 0.28]}
-        scale={0.12}
+        scale={0.11}
       />
     </group>
   );

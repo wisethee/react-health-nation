@@ -6,7 +6,7 @@ export const DATA = [
   {
     id: 1,
     title: "Charity Cause 1",
-    obj: <Heart position={[0, -0.8, 0]} rotation={[-0.1, 0.1, -0.15]} />,
+    obj: <Cell position={[-0, -0, 0]} rotation={[-0.3, -1, -0.15]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     order: "md:order-first",
@@ -36,7 +36,7 @@ export const DATA = [
   {
     id: 2,
     title: "Charity Cause 2",
-    obj: <Cell />,
+    obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.1, 0.1, -0.15]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     order: "order-last",
@@ -66,7 +66,7 @@ export const DATA = [
   {
     id: 3,
     title: "Charity Cause 3",
-    obj: <Brain />,
+    obj: <Brain position={[0, -0.5, 0]} rotation={[-0.6, -0.3, -0.9]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
     order: "md:order-first",
