@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Cause from "../../core/components/cause/cause";
 import About from "../../core/components/about/about";
 
-import DATA from "../../data/data.json";
+import { DATA } from "../../data/data";
 
 const Home = () => {
   return (
