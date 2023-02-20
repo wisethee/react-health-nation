@@ -1,0 +1,9 @@
+.about-bg {
+  background-image: url("../../../../assets/about-bg.png");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}

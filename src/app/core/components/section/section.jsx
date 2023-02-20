@@ -1,44 +1,12 @@
-import { Canvas } from "@react-three/fiber";
-import Scene from "../../three/scene/scene";
-import Button from "../button/button";
-
-import "./section.css";
-
-const Section = ({ title, description, order, btnColor }) => {
-  console.log(order);
+const Section = ({ height, padding, bgClass = "bg-transparent", children }) => {
   return (
-    <section className="flex py-8">
-      <div
-        className={`flex flex-col w-full md:w-1/2 justify-center items-start gap-12 ${order}`}
-      >
-        <div className="flex flex-col gap-4">
-          <h1 className="text-display-medium">{title}</h1>
-          <p>{description}</p>
+    <section className={`relative ${padding} ${height}`}>
+      <div className="px-4 md:px-8 lg:px-12 xl:px-16">
+        <div className="max-w-[1280px] mx-auto w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:gap-12">
+          {children}
         </div>
-
-        <Button
-          buttonType={btnColor}
-          textTransform={"uppercase"}
-          shadow={"shadow-sm"}
-        >
-          Donate now
-          <span className="pl-2" aria-hidden="true">
-            &rarr;
-          </span>
-        </Button>
       </div>
-      <Canvas
-        className="canvas"
-        shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 2000,
-          position: [-3, 3, 2],
-        }}
-      >
-        <Scene />
-      </Canvas>
+      <div className={bgClass}></div>
     </section>
   );
 };
