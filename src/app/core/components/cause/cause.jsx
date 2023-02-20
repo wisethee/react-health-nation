@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import Scene from "../../three/scene/scene_heart";
+import Scene from "../../three/scene/scene_brain";
 import Section from "../section/section";
 import Heading from "../heading/heading";
 import Button from "../button/button";

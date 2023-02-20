@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Canvas } from "@react-three/fiber";
-import Scene from "../../core/three/scene/scene_heart";
+import Scene from "../../core/three/scene/scene_brain";
 
 const Experimental = () => {
   return (

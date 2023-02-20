@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Canvas } from "@react-three/fiber";
-import Scene from "../../core/three/scene/scene_brain";
+import Scenebrain from "../../core/three/scene/scene_brain";
 
 const ExperimentalBrain = () => {
   return (
@@ -14,7 +14,7 @@ const ExperimentalBrain = () => {
           position: [-3, 3, 2],
         }}
       >
-        <Scene />
+        <Scenebrain />
       </Canvas>
     </Fragment>
   );
