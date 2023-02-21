@@ -1,12 +1,4 @@
-import { createContext, useState } from "react";
-
-const addCartItem = (checkoutItem, itemToAdd) => {
-  // if cartItem is empty, add itemToAdd to cartItem
-  // TO FIX
-  if (checkoutItem.length === 0) {
-    return [{ ...itemToAdd, amount: checkoutItem.amount }];
-  }
-};
+import { createContext, useState, useEffect } from "react";
 
 export const CheckoutContext = createContext({
   checkoutItem: [],
@@ -16,8 +8,12 @@ export const CheckoutContext = createContext({
 export const CheckoutProvider = ({ children }) => {
   const [checkoutItem, setCheckoutItem] = useState([]);
   const addItem = (itemToAdd) => {
-    setCheckoutItem(addCartItem(checkoutItem, itemToAdd));
+    setCheckoutItem([{ ...itemToAdd, amount: checkoutItem.amount }]);
   };
+
+  useEffect(() => {
+    console.log(checkoutItem);
+  }, [checkoutItem]);
 
   const value = { addItem, checkoutItem };
   return (
