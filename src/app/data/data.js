@@ -5,10 +5,10 @@ import Brain from "../core/three/brain/brain";
 export const DATA = [
   {
     id: 1,
-    title: "Charity Cause 1",
+    title: "Diabetes",
     obj: <Cell position={[-0, -0, 0]} rotation={[-0.3, -1, -0.15]} />,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
+      "Diabetes is the costliest disease for our nation's health budget, costing over 10 million per year. Around 5 million people are living with diabetes, it's estimated another million may be undiagned. \n",
     order: "md:order-first",
     btnColor: "tertiary",
     headingSize: "h1",
@@ -17,9 +17,9 @@ export const DATA = [
     info: [
       {
         id: 4,
-        title: "Charity 1",
+        title: "Action Sugar Drop",
         description:
-          "Lorem ipsum dolor sit amet consectetur. Non morbi vel semper nec. Consectetur eget elit tincidunt quam consequat parturient. Dictumst lorem nullam viverra at nulla phasellus.",
+          "A charity that helps people living with diabetes make lifestyle changes that will help reduce their blood sugar levels.",
         startVal: "£64,000",
         endVal: "£99,000",
       },
@@ -35,7 +35,7 @@ export const DATA = [
   },
   {
     id: 2,
-    title: "Charity Cause 2",
+    title: "Heart Disease",
     obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.3, 0.3, -0.6]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
@@ -65,7 +65,7 @@ export const DATA = [
   },
   {
     id: 3,
-    title: "Charity Cause 3",
+    title: "Dementia and Alzheimer disease",
     obj: <Brain position={[0, -0.5, 0]} rotation={[-0.6, -0.3, -0.9]} />,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
