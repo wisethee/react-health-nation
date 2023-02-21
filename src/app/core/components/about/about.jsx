@@ -86,8 +86,8 @@ const About = ({ btnColor }) => {
         </Button>
       </div>
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center mb-12 md:mb-0 order-0">
-        <div className="flex justify-center">
-          <AboutImg />
+        <div className="flex justify-center relative">
+          <AboutImg className="z-10 team-img" />
           <Circle
             customClass={"circle-purple"}
             left="30%"
