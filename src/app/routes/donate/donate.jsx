@@ -15,8 +15,8 @@ const Donate = () => {
 
   const project = data.find((project) => project.id === parseInt(params.id));
 
-  const addItemToCheckout = () => {
-    addItem(project);
+  const addItemToCheckout = (id) => {
+    addItem({ ...project, charityId: id });
   };
 
   return (
@@ -28,6 +28,7 @@ const Donate = () => {
             return (
               <Info
                 key={id}
+                id={id}
                 btnColor={"secondary"}
                 infoTitle={title}
                 infoDescription={description}

@@ -6,6 +6,7 @@ import Button from "../../components/button/button";
 import FormInput from "../../components/form-input/form-input";
 
 const Info = ({
+  id,
   btnColor,
   infoTitle,
   infoDescription,
@@ -16,7 +17,7 @@ const Info = ({
   const navigate = useNavigate();
 
   const handleBtnClick = () => {
-    handleOnClick();
+    handleOnClick(id);
     navigate("/checkout");
   };
 
