@@ -14,6 +14,7 @@ import ScrollToTop from "./app/core/layout/scroll/scroll";
 // Importing the main CSS files
 import "./styles/tailwind.css";
 import "./styles/main.css";
+import { CheckoutProvider } from "./app/core/contexts/checkout";
 
 // Rendering the App component inside the root element
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,8 +23,10 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <DataProvider>
-          <ScrollToTop />
-          <App />
+          <CheckoutProvider>
+            <ScrollToTop />
+            <App />
+          </CheckoutProvider>
         </DataProvider>
       </UserProvider>
     </BrowserRouter>
