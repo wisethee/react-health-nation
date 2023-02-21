@@ -23,6 +23,36 @@ const Donate = () => {
     addItem({ ...project, charityId: id });
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("#circle1", {
+      x: 0,
+      y: 0,
+      scale: 4,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 1,
+      ease: "steps(20)",
+    });
+    gsap.to("#circle2", {
+      x: 0,
+      y: 0,
+      scale: 1,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 1,
+    });
+    gsap.to("#circle3", {
+      x: -100,
+      y: 50,
+      scale: 1.7,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 2,
+    });
+  }, []);
+
   return (
     <Fragment>
       <Cause cause={project} />
