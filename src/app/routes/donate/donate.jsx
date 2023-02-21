@@ -4,20 +4,19 @@ import Section from "../../core/components/section/section";
 import Cause from "../../core/components/cause/cause";
 import Info from "../../core/components/info/info";
 
-import projects from "../../data/data.json";
+import { DATA } from "../../data/data";
 
 const Donate = () => {
   const params = useParams();
-  const project = projects.find(
-    (project) => project.id === parseInt(params.id)
-  );
+  const project = DATA.find((project) => project.id === parseInt(params.id));
 
-  const { title, description, order, btnColor, bgClass, info } = project;
+  const { title, obj, description, order, btnColor, bgClass, info } = project;
 
   return (
     <Fragment>
       <Cause
         title={title}
+        obj={obj}
         description={description}
         btnColor={btnColor}
         order={order}

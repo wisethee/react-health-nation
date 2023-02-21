@@ -14,16 +14,16 @@ const Cause = ({
   btnColor,
   headingSize,
   sectionHeight,
-  sectionPadding,
   bgClass,
+  obj,
   id,
 }) => {
   const navigate = useNavigate();
 
   return (
-    <Section height={sectionHeight} padding={sectionPadding} bgClass={bgClass}>
+    <Section height={sectionHeight} padding={"py-8"} bgClass={bgClass}>
       <div
-        className={`flex flex-col w-full md:w-1/2 justify-center md:items-start gap-12 order-last ${order}`}
+        className={`flex flex-col w-full md:w-1/2 items-center justify-center md:items-start gap-12 order-last ${order}`}
       >
         <div className="flex flex-col justify-center text-center md:text-left md:gap-4">
           <Heading priority={headingSize}>{title}</Heading>
@@ -52,7 +52,7 @@ const Cause = ({
           position: [-3, 3, 2],
         }}
       >
-        <Scene />
+        <Scene obj={obj} />
       </Canvas>
     </Section>
   );

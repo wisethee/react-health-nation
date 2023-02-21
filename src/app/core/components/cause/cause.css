@@ -1,6 +1,6 @@
 .canvas {
-  width: 50% !important;
-  height: 720px !important;
+  width: 100% !important;
+  height: 512px !important;
 }
 
 .order-last {
@@ -41,6 +41,7 @@
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  margin-bottom: -14rem;
 }
 
 .charity2-bg {
@@ -51,6 +52,7 @@
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  margin-bottom: -28rem;
 }
 
 .charity3-bg {
@@ -61,10 +63,25 @@
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  margin-bottom: -28rem;
 }
 
 @media (min-width: 906px) {
+  .canvas {
+    width: 50% !important;
+    height: 720px !important;
+  }
+
   .md\:order-first {
     order: -999999 !important;
+  }
+
+  .charity1-bg,
+  .cjarity2-bg {
+    margin-bottom: 0;
+  }
+
+  .charity3-bg {
+    margin-bottom: -20rem;
   }
 }
