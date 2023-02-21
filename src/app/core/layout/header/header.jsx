@@ -23,9 +23,9 @@ const Header = () => {
   useLayoutEffect(()=> {
     let ctx = gsap.context(() => {
       // use scoped selectors
-      
-      gsap.from(".logo", { duration: 2, x:-200, ease: "power1.out" })
-      gsap.from(".logo", {delay:1, duration:2, opacity: 0.2})
+      let tl = gsap.timeline()
+      tl.from(".logo", { duration: 2, x:-200, ease: "power1.out" })
+      tl.from(".logo", {delay:1, duration:2, opacity: 0.2})
     }, app);
     return () => ctx.revert()
   }, []) 
