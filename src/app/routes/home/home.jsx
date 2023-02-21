@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Fragment>
       <div  ref={app}>
-        <div className="container">test test</div>
+        <div className="container">git</div>
       </div>
       {DATA.map(
         ({
