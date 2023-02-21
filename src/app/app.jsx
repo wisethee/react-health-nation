@@ -9,6 +9,7 @@ import Auth from "./routes/auth/auth";
 import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
 import Donate from "./routes/donate/donate";
+import Checkout from "./routes/checkout/checkout";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/donate/:id" element={<Donate />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
 
