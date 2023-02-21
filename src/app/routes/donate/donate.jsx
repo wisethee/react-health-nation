@@ -1,33 +1,23 @@
+import { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { Fragment } from "react";
 import Section from "../../core/components/section/section";
 import Cause from "../../core/components/cause/cause";
 import Info from "../../core/components/info/info";
 
-import { DATA } from "../../data/data";
+import { DataContext } from "../../core/contexts/data";
 
 const Donate = () => {
   const params = useParams();
-  const project = DATA.find((project) => project.id === parseInt(params.id));
+  const { data } = useContext(DataContext);
 
-  const { title, obj, description, order, btnColor, bgClass, info } = project;
+  const project = data.find((project) => project.id === parseInt(params.id));
 
   return (
     <Fragment>
-      <Cause
-        title={title}
-        obj={obj}
-        description={description}
-        btnColor={btnColor}
-        order={order}
-        headingSize={"h1"}
-        sectionHeight={"hero"}
-        sectionPadding={"py-0"}
-        bgClass={bgClass}
-      ></Cause>
+      <Cause cause={project} />
       <Section height={"h-full"} padding={"py-20"}>
         <div className="gap-12 columns-1 lg:columns-2">
-          {info.map(({ id, title, description, startVal, endVal }) => {
+          {project.info.map(({ id, title, description, startVal, endVal }) => {
             return (
               <Info
                 key={id}

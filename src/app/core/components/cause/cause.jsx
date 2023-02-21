@@ -7,19 +7,20 @@ import Button from "../button/button";
 
 import "./cause.css";
 
-const Cause = ({
-  title,
-  description,
-  order,
-  btnColor,
-  btnDisplay = "inline-block",
-  headingSize,
-  sectionHeight,
-  bgClass,
-  obj,
-  id,
-}) => {
+const Cause = ({ cause }) => {
   const navigate = useNavigate();
+
+  const {
+    title,
+    description,
+    order,
+    btnColor,
+    headingSize,
+    sectionHeight,
+    bgClass,
+    obj,
+    id,
+  } = cause;
 
   return (
     <Section height={sectionHeight} padding={"py-8"} bgClass={bgClass}>
@@ -35,7 +36,6 @@ const Cause = ({
           buttonType={btnColor}
           textTransform={"uppercase"}
           shadow={"shadow-sm"}
-          btnDisplay={btnDisplay}
           onClick={() => navigate(`/donate/${id}`)}
         >
           Find out more

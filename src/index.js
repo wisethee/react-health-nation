@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { UserProvider } from "./app/core/contexts/user";
+import { DataProvider } from "./app/core/contexts/data";
 
 // Importing the App component
 import App from "./app/app";
@@ -20,8 +21,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ScrollToTop />
-        <App />
+        <DataProvider>
+          <ScrollToTop />
+          <App />
+        </DataProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
