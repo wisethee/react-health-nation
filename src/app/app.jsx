@@ -10,6 +10,7 @@ import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
 import Experimental from "./routes/experimental/experimental";
 import Donate from "./routes/donate/donate";
+import Animate from "./core/components/animate/animate"
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <Animate />
     </Fragment>
   );
 };
