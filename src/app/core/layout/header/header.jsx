@@ -5,6 +5,9 @@ import { UserContext } from "../../contexts/user";
 
 import Button from "../../components/button/button";
 
+import {gsap} from "gsap";
+import { useLayoutEffect, useRef } from "react";
+
 // Assets
 import { ReactComponent as Logo } from "../../../../assets/logo.svg";
 
@@ -16,9 +19,19 @@ const Header = () => {
     await signOutAuthUser();
     navigate("/");
   };
+  const app = useRef()
+  useLayoutEffect(()=> {
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      
+      gsap.from(".logo", { duration: 2, x:-200, ease: "power1.out" })
+      gsap.from(".logo", {delay:1, duration:2, opacity: 0.2})
+    }, app);
+    return () => ctx.revert()
+  }, []) 
 
   return (
-    <header className="header main flex flex-col px-4 md:px-8 lg:px-12 xl:px-16">
+    <header ref={app} className="header main flex flex-col px-4 md:px-8 lg:px-12 xl:px-16">
       <div className="flex justify-between items-center min-h-[7rem]">
         <div className="logo">
           <Link to="/" className="flex gap-2 items-center">

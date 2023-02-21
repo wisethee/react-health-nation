@@ -7,7 +7,7 @@ const Animate = () => {
     let ctx = gsap.context(() => {
       // use scoped selectors
       gsap.to(".container", { opacity: 0.6 });
-      gsap.to(".circle", { duration: 2, x:500, repeat: 2, yoyo: true })
+      gsap.to(".circle", { duration: 2, x:500, y:-500, repeat: 2, yoyo: true })
     }, app);
     return () => ctx.revert()
   }, []) 
