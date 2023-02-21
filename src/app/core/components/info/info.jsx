@@ -3,7 +3,18 @@ import Button from "../../components/button/button";
 import FormInput from "../../components/form-input/form-input";
 import { Fragment } from "react";
 
-const Info = ({ btnColor, infoTitle, infoDescription, startVal, endVal }) => {
+const Info = ({
+  btnColor,
+  infoTitle,
+  infoDescription,
+  startVal,
+  endVal,
+  handleOnClick,
+}) => {
+  const handleBtnClick = () => {
+    handleOnClick();
+  };
+
   return (
     <Fragment>
       <div className="flex flex-col w-full justify-center md:items-start gap-12 py-12">
@@ -25,6 +36,7 @@ const Info = ({ btnColor, infoTitle, infoDescription, startVal, endVal }) => {
               textTransform={"uppercase"}
               shadow={"shadow-sm"}
               other={"flex-shrink-0 ml-[-20px] z-10"}
+              onClick={handleBtnClick}
             >
               Donate Now
               <span className="pl-2" aria-hidden="true">

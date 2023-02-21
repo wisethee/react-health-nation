@@ -8,17 +8,18 @@ const addCartItem = (checkoutItem, itemToAdd) => {
 };
 
 export const CheckoutContext = createContext({
-  cartItem: [],
+  checkoutItem: [],
   addItem: () => {},
 });
 
 export const CheckoutProvider = ({ children }) => {
   const [checkoutItem, setCheckoutItem] = useState([]);
   const addItem = (itemToAdd) => {
+    console.log(itemToAdd);
     setCheckoutItem(addCartItem(checkoutItem, itemToAdd));
   };
 
-  const value = null;
+  const value = { addItem, checkoutItem };
   return (
     <CheckoutContext.Provider value={value}>
       {children}

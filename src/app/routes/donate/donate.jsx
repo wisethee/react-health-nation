@@ -5,12 +5,19 @@ import Cause from "../../core/components/cause/cause";
 import Info from "../../core/components/info/info";
 
 import { DataContext } from "../../core/contexts/data";
+import { CheckoutContext } from "../../core/contexts/checkout";
 
 const Donate = () => {
   const params = useParams();
   const { data } = useContext(DataContext);
 
+  const { addItem } = useContext(CheckoutContext);
+
   const project = data.find((project) => project.id === parseInt(params.id));
+
+  const addItemToCheckout = () => {
+    addItem(project);
+  };
 
   return (
     <Fragment>
@@ -26,6 +33,7 @@ const Donate = () => {
                 infoDescription={description}
                 startVal={startVal}
                 endVal={endVal}
+                handleOnClick={addItemToCheckout}
               />
             );
           })}
