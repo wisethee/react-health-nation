@@ -1,10 +1,66 @@
+import { gsap } from "gsap";
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Section from "../section/section";
 import Button from "../../components/button/button";
+import Circle from "../../components/circle/circle";
 import { ReactComponent as AboutImg } from "../../../../assets/about.svg";
 
 import "./about.css";
 
 const About = ({ btnColor }) => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("#circle4", {
+      scrollTrigger: {
+        trigger: "#circle4",
+        scrub: 1,
+        start: "top center",
+        end: "20px 80%",
+        markers: false,
+      },
+      x: -80,
+      y: -24,
+      scale: 4,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 1,
+      ease: "steps(20)",
+    });
+    gsap.to("#circle5", {
+      scrollTrigger: {
+        trigger: "#circle4",
+        scrub: 1,
+        start: "top center",
+        end: "20px 80%",
+        markers: false,
+      },
+      x: 96,
+      y: 96,
+      scale: 2,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 2,
+      ease: "steps(20)",
+    });
+    gsap.to("#circle6", {
+      scrollTrigger: {
+        trigger: "#circle4",
+        scrub: 1,
+        start: "top center",
+        end: "20px 80%",
+        markers: false,
+      },
+      x: 100,
+      y: 50,
+      scale: 1.7,
+      duration: 2,
+      autoAlpha: 1,
+      delay: 2,
+      ease: "steps(20)",
+    });
+  }, []);
   return (
     <Section height={"h-full"} padding={"py-20"} bgClass={"about-bg"}>
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center md:items-start gap-12 order-1">
@@ -32,8 +88,26 @@ const About = ({ btnColor }) => {
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center mb-12 md:mb-0 order-0">
         <div className="flex justify-center">
           <AboutImg />
+          <Circle
+            customClass={"circle-purple"}
+            left="30%"
+            top="30%"
+            id={"circle4"}
+          />
+          <Circle
+            customClass={"circle-light-green"}
+            left="45%"
+            top="25%"
+            id={"circle5"}
+          />
         </div>
       </div>
+      <Circle
+        customClass={"circle-purple-fill"}
+        right="25%"
+        bottom="20%"
+        id={"circle6"}
+      />
     </Section>
   );
 };

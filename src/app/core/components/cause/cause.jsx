@@ -12,6 +12,7 @@ const Cause = ({
   description,
   order,
   btnColor,
+  btnDisplay = "inline-block",
   headingSize,
   sectionHeight,
   bgClass,
@@ -34,6 +35,7 @@ const Cause = ({
           buttonType={btnColor}
           textTransform={"uppercase"}
           shadow={"shadow-sm"}
+          btnDisplay={btnDisplay}
           onClick={() => navigate(`/donate/${id}`)}
         >
           Find out more

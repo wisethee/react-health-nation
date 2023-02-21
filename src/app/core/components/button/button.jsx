@@ -10,11 +10,13 @@ const Button = ({
   buttonType,
   textTransform = "normal-case",
   shadow = "shadow-none",
+  btnDisplay,
+  other = "border-none",
   ...otherProps
 }) => {
   return (
     <button
-      className={`button text-label-medium rounded-full px-6 py-2 ${textTransform} ${shadow} ${BUTTON_TYPE_CLASSES[buttonType]}`}
+      className={`button text-label-medium rounded-full px-6 py-2 ${btnDisplay} ${textTransform} ${shadow} ${BUTTON_TYPE_CLASSES[buttonType]} ${other}`}
       {...otherProps}
     >
       {children}
