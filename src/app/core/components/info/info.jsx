@@ -1,7 +1,9 @@
+import { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Progressbar from "../progressbar/progressbar";
 import Button from "../../components/button/button";
 import FormInput from "../../components/form-input/form-input";
-import { Fragment } from "react";
 
 const Info = ({
   btnColor,
@@ -11,8 +13,11 @@ const Info = ({
   endVal,
   handleOnClick,
 }) => {
+  const navigate = useNavigate();
+
   const handleBtnClick = () => {
     handleOnClick();
+    navigate("/checkout");
   };
 
   return (
@@ -23,7 +28,7 @@ const Info = ({
           <p>{infoDescription}</p>
         </div>
         <Progressbar startVal={startVal} endVal={endVal} />
-        <div className="flex flex-col justufy-center w-full mt-8">
+        <div className="flex flex-col justify-center w-full mt-8">
           <div className="flex rounded-full shadow-sm">
             <FormInput
               required

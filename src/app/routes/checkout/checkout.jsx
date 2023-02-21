@@ -9,7 +9,10 @@ const Checkout = () => {
   return (
     <div>
       <h1>Checkout Page</h1>
-      {checkoutItem.map((item) => () => item && <CheckoutItem item={item} />)}
+
+      {checkoutItem.map((item) => (
+        <CheckoutItem key={item.id} item={checkoutItem} />
+      ))}
     </div>
   );
 };
