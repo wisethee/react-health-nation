@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 export function Brain(props) {
   const { nodes, materials } = useGLTF("./assets/3d-brain.glb");
   return (
-    <group {...props} dispose={null} scale={2}>
+    <group {...props} dispose={null} scale={1.75}>
       <mesh
         castShadow
         receiveShadow

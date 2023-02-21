@@ -7,18 +7,20 @@ import Button from "../button/button";
 
 import "./cause.css";
 
-const Cause = ({
-  title,
-  description,
-  order,
-  btnColor,
-  headingSize,
-  sectionHeight,
-  bgClass,
-  obj,
-  id,
-}) => {
+const Cause = ({ cause }) => {
   const navigate = useNavigate();
+
+  const {
+    title,
+    description,
+    order,
+    btnColor,
+    headingSize,
+    sectionHeight,
+    bgClass,
+    obj,
+    id,
+  } = cause;
 
   return (
     <Section height={sectionHeight} padding={"py-8"} bgClass={bgClass}>

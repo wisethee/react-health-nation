@@ -1,6 +1,12 @@
-const Section = ({ height, padding, bgClass = "bg-transparent", children }) => {
+const Section = ({
+  height,
+  padding,
+  bgClass = "bg-transparent",
+  name = "section",
+  children,
+}) => {
   return (
-    <section className={`relative ${padding} ${height}`}>
+    <section className={`relative ${padding} ${height} ${name}`}>
       <div className="px-4 md:px-8 lg:px-12 xl:px-16">
         <div className="max-w-[1280px] mx-auto w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:gap-12">
           {children}

@@ -93,7 +93,7 @@ const SignUp = ({ className }) => {
           onChange={handleChange}
         />
 
-        <Button type="submit" buttonType={"primary"}>
+        <Button type="submit" buttonType={"tertiary"}>
           Sign Up
         </Button>
       </form>
