@@ -1,13 +1,27 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Section from "../../core/components/section/section";
 import CheckoutItem from "../../core/components/checkout-item/checkout-item";
 import { CheckoutContext } from "../../core/contexts/checkout";
 import FormInput from "../../core/components/form-input/form-input";
 import Button from "../../core/components/button/button";
+import Modal from "../../core/components/modal/modal";
 
 const Checkout = () => {
   const { checkoutItem } = useContext(CheckoutContext);
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setShowModal(true);
+  };
+
+  const handleModal = () => {
+    setShowModal(false);
+    navigate("/");
+  };
 
   if (checkoutItem.length > 0) {
     return (
@@ -29,14 +43,14 @@ const Checkout = () => {
         >
           <div className="flex flex-col w-full md:w-1/2 justify-center items-center md:items-start gap-12 order-1 md:order-0">
             <form
-              // onSubmit={handleSubmit}
+              onSubmit={handleSubmit}
               className="flex flex-col gap-6 items-center md:items-start w-full"
             >
               <FormInput
                 required
                 type="text"
                 label={"Card Number"}
-                placeholder="1234-5678-XXXX-XXXX"
+                defaultValue="1234-5678-9012-3456"
                 name="cardNumber"
               />
               <span className="flex flex-col w-full text-secondary opacity-60 mb-[-22px]">
@@ -48,21 +62,21 @@ const Checkout = () => {
                   type="text"
                   label={""}
                   name="month"
-                  placeholder="Month"
+                  defaultValue="06"
                 />
                 <FormInput
                   required
                   type="text"
                   label={""}
                   name="year"
-                  placeholder="Year"
+                  defaultValue="2025"
                 />
                 <FormInput
                   required
                   type="text"
                   label={""}
                   name="code"
-                  placeholder="Security code"
+                  defaultValue="123"
                 />
               </div>
               <FormInput
@@ -70,7 +84,7 @@ const Checkout = () => {
                 type="text"
                 label={"Name on card"}
                 name="name"
-                placeholder="John Smith"
+                defaultValue="John Smith"
               />
               <Button
                 type="submit"
@@ -95,6 +109,7 @@ const Checkout = () => {
             </div>
           </div>
         </Section>
+        {showModal ? <Modal showMessage={handleModal} /> : null}
       </Fragment>
     );
   }

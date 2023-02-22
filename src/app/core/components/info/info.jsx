@@ -1,5 +1,7 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { UserContext } from "../../contexts/user";
 
 import Progressbar from "../progressbar/progressbar";
 import Button from "../../components/button/button";
@@ -15,6 +17,7 @@ const Info = ({
   handleOnClick,
   amountVal = "",
 }) => {
+  const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const [amountForm, setAmount] = useState(amountVal);
@@ -44,28 +47,36 @@ const Info = ({
           onSubmit={handleBtnClick}
           className="flex flex-col justify-center w-full mt-8"
         >
-          <div className="flex rounded-full shadow-sm">
-            <FormInput
-              required
-              type="number"
-              other={"rounded-l-full bg-light-green px-6 placeholder:uppercase"}
-              placeholder="Enter amount"
-              name="amountVal"
-              value={amountVal}
-              onChange={handleChange}
-            />
-            <Button
-              buttonType={btnColor}
-              textTransform={"uppercase"}
-              shadow={"shadow-sm"}
-              other={"flex-shrink-0 ml-[-20px] z-10"}
-            >
-              Donate Now
-              <span className="pl-2" aria-hidden="true">
-                &rarr;
-              </span>
-            </Button>
-          </div>
+          {currentUser ? (
+            <div className="flex rounded-full shadow-sm">
+              <FormInput
+                required
+                type="number"
+                other={
+                  "rounded-l-full bg-light-green px-6 placeholder:uppercase"
+                }
+                placeholder="Enter amount"
+                name="amountVal"
+                value={amountVal}
+                onChange={handleChange}
+              />
+              <Button
+                buttonType={btnColor}
+                textTransform={"uppercase"}
+                shadow={"shadow-sm"}
+                other={"flex-shrink-0 ml-[-20px] z-10"}
+              >
+                Donate Now
+                <span className="pl-2" aria-hidden="true">
+                  &rarr;
+                </span>
+              </Button>
+            </div>
+          ) : (
+            <p className="p-4 bg-secondary rounded-md">
+              Please log in if you would like to donate!
+            </p>
+          )}
         </form>
       </div>
     </Fragment>
