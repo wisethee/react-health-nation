@@ -4,3 +4,11 @@
   width: 100px;
   height: 100px;
 }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid lightblue;
+}

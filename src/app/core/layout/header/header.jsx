@@ -25,7 +25,7 @@ const Header = () => {
       // use scoped selectors
       let tl = gsap.timeline()
       tl.from(".logo", { duration: 2, x:-200, ease: "power1.out" })
-      tl.from(".logo", {delay:1, duration:2, opacity: 0.2})
+      tl.from(".logo", {duration:1, opacity: 0.2})
     }, app);
     return () => ctx.revert()
   }, []) 
