@@ -5,9 +5,6 @@ import { UserContext } from "../../contexts/user";
 
 import Button from "../../components/button/button";
 
-import {gsap} from "gsap";
-import { useLayoutEffect, useRef } from "react";
-
 // Assets
 import { ReactComponent as Logo } from "../../../../assets/logo.svg";
 
