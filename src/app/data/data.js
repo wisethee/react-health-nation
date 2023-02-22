@@ -68,7 +68,7 @@ export const DATA = [
     title: "Dementia and Alzheimer disease",
     obj: <Brain position={[0, -0.5, 0]} rotation={[-0.6, -0.3, -0.9]} />,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
+      "The cost to the nation’s health service of Alzheimer disease and other dementias is around 2 billion but when you add in the cost of social care the total cost reaches a staggering 35 billion. This is predicted to increase over the next decade as people live longer. A large proportion of the costs of caring for someone with Dementia are borne by the person themselves or their family.",
     order: "md:order-first",
     btnColor: "tertiary",
     headingSize: "h2",
@@ -79,7 +79,7 @@ export const DATA = [
         id: 8,
         title: "Memory Minders",
         description:
-          "Lorem ipsum dolor sit amet consectetur. Non morbi vel semper nec. Consectetur eget elit tincidunt quam consequat parturient. Dictumst lorem nullam viverra at nulla phasellus.",
+          "Memory Minders provides people with Dementia and their families devices and access to assistive technologies that can help with some of the problems encountered in living with dementia (or caring for a loved one with Dementia). Technologies that can benefit are Apps for medication reminders, GPS tracking apps and voice activated assistants. The charity provides the necessary devices and assistance in setting up and using them.",
         startVal: "£64,000",
         endVal: "£99,000",
       },
@@ -87,7 +87,7 @@ export const DATA = [
         id: 9,
         title: "Dementia-Assist",
         description:
-          "Lorem ipsum dolor sit amet consectetur. Non morbi vel semper nec. Consectetur eget elit tincidunt quam consequat parturient. Dictumst lorem nullam viverra at nulla phasellus.",
+          "Dementia Assist funds research into the use of assistive technologies to improve the lives of people with Dementia. An exciting project that the charity currently funds is research into the use of augmented reality headsets where a carer can display customised reminder messages via a website. It is hoped that use of this technology could not only increase the independence of the person living with Dementia but also improve the life of their carers as well.",
         startVal: "£24,000",
         endVal: "£99,000",
       },
