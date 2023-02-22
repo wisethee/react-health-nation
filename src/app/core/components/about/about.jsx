@@ -65,7 +65,9 @@ const About = ({ btnColor }) => {
     <Section height={"h-full"} padding={"py-20"} bgClass={"about-bg"}>
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center md:items-start gap-12 order-1">
         <div className="flex flex-col justify-center text-center md:text-left md:gap-4">
-          <h2 className="text-display-medium">Our team</h2>
+          <h2 className="text-headline-medium md:text-display-small lg:text-display-medium mb-3">
+            Our team
+          </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur. Quis viverra augue sit eros
             at lacus dis egestas. Sit amet ultrices blandit vitae nunc
