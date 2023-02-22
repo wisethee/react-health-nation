@@ -23,8 +23,6 @@ const Donate = () => {
     (project) => project.id === parseInt(params.id)
   );
 
-  console.log(project);
-
   const addItemToCheckout = (id, amountVal) => {
     addItem({ ...project, charityId: id, amount: amountVal });
   };
