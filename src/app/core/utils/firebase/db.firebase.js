@@ -1,7 +1,30 @@
 import { firebaseApp } from "./init.firebase";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+} from "firebase/firestore";
 
 export const db = getFirestore(firebaseApp);
+
+// Add DATA as collection to firestore
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = collection(db, collectionKey);
+
+  const batch = writeBatch(db);
+  objectsToAdd.forEach((obj) => {
+    const newDocRef = doc(collectionRef, obj.title.toLowerCase());
+    batch.set(newDocRef, obj);
+  });
+
+  return await batch.commit();
+};
 
 export const createUserDocument = async (user, additionalInformation = {}) => {
   // If no user, return
