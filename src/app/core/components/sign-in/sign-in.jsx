@@ -52,7 +52,9 @@ const SignIn = ({ className }) => {
 
   return (
     <div className={`sign-up ${className}`}>
-      <h2 className="text-headline-medium">Already have and account?</h2>
+      <h2 className="text-headline-small md:text-headline-medium">
+        Already have an account?
+      </h2>
       <span className="mb-12 opacity-60">
         Sign In with your email and password
       </span>
@@ -75,7 +77,7 @@ const SignIn = ({ className }) => {
           onChange={handleChange}
         />
 
-        <Button type="submit" buttonType={"primary"}>
+        <Button type="submit" buttonType={"tertiary"}>
           Sign In
         </Button>
       </form>

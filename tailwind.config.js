@@ -33,6 +33,9 @@ module.exports = {
       black: "#000000",
       white: "#ffffff",
       transparent: "transparent",
+      "light-grey": "#F5F7F7",
+      "light-orange": "#FFF4F2",
+      "light-green": "#E8F7F8",
     },
     fontSize: {
       "body-small": [
@@ -132,17 +135,17 @@ module.exports = {
         },
       ],
       "display-small": [
-        "3.625rem",
+        "3.5rem",
         {
-          lineHeight: "4.125rem",
+          lineHeight: "4rem",
           letterSpacing: "0",
           fontWeight: "700",
         },
       ],
       "display-medium": [
-        "3.5rem",
+        "3.625rem",
         {
-          lineHeight: "4rem",
+          lineHeight: "4.125rem",
           letterSpacing: "0",
           fontWeight: "700",
         },

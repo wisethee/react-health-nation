@@ -1,0 +1,87 @@
+.canvas {
+  width: 100% !important;
+  height: 512px !important;
+}
+
+.order-last {
+  order: 999999;
+}
+
+.order-first {
+  order: -999999;
+}
+
+.hero {
+  min-height: calc(100vh - 7rem);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.charity1-bg {
+  background-image: url("../../../../assets/charity1-bg.png");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  margin-bottom: -14rem;
+}
+
+.charity2-bg {
+  background-image: url("../../../../assets/charity2-bg.png");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  margin-bottom: -28rem;
+}
+
+.charity3-bg {
+  background-image: url("../../../../assets/charity3-bg.png");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  margin-bottom: -28rem;
+}
+
+@media (min-width: 906px) {
+  .canvas {
+    width: 50% !important;
+    height: 720px !important;
+  }
+
+  .md\:order-first {
+    order: -999999 !important;
+  }
+
+  .charity1-bg,
+  .charity2-bg {
+    margin-bottom: 0;
+  }
+
+  .charity3-bg {
+    margin-bottom: -20rem;
+  }
+}

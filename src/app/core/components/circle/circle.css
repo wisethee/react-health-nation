@@ -1,0 +1,30 @@
+.circles {
+  display: inline-flex;
+  border-radius: 50%;
+  position: absolute;
+  visibility: hidden;
+  width: 56px;
+  height: 56px;
+}
+
+.circle-purple-fill {
+  background-color: #d7e2ff;
+}
+
+.circle-purple {
+  border: 4px solid #d7e2ff;
+  background-color: transparent;
+}
+
+.circle-green-fill {
+  background-color: #19abb4;
+}
+
+.circle-light-green-fill {
+  background-color: #e8f7f8;
+}
+
+.circle-light-green {
+  border: 6px solid #e8f7f8;
+  background-color: transparent;
+}
