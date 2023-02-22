@@ -7,7 +7,7 @@ import Button from "../button/button";
 
 import "./cause.css";
 
-const Cause = ({ cause }) => {
+const Cause = ({ cause, other }) => {
   const navigate = useNavigate();
 
   const {
@@ -36,6 +36,7 @@ const Cause = ({ cause }) => {
           buttonType={btnColor}
           textTransform={"uppercase"}
           shadow={"shadow-sm"}
+          other={other}
           onClick={() => navigate(`/donate/${id}`)}
         >
           Find out more

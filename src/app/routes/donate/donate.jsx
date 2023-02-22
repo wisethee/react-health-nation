@@ -19,8 +19,8 @@ const Donate = () => {
 
   const project = data.find((project) => project.id === parseInt(params.id));
 
-  const addItemToCheckout = (id) => {
-    addItem({ ...project, charityId: id });
+  const addItemToCheckout = (id, amountVal) => {
+    addItem({ ...project, charityId: id, amount: amountVal });
   };
 
   useEffect(() => {
@@ -55,9 +55,9 @@ const Donate = () => {
 
   return (
     <Fragment>
-      <Cause cause={project} />
+      <Cause cause={project} other={"hidden"} />
       <Section height={"h-full"} padding={"py-20"}>
-        <div className="gap-12 columns-1 lg:columns-2">
+        <div className="gap-12 columns-1 md:columns-2 md:flex md:items-end ">
           {project.info.map(({ id, title, description, startVal, endVal }) => {
             return (
               <Info

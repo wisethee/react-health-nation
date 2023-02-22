@@ -8,7 +8,8 @@ export const CheckoutContext = createContext({
 export const CheckoutProvider = ({ children }) => {
   const [checkoutItem, setCheckoutItem] = useState([]);
   const addItem = (itemToAdd) => {
-    setCheckoutItem([{ ...itemToAdd, amount: checkoutItem.amount }]);
+    // setCheckoutItem([{ ...itemToAdd, amount: checkoutItem.amount }]);
+    setCheckoutItem([{ ...itemToAdd }]);
   };
 
   useEffect(() => {

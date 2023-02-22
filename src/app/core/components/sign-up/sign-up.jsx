@@ -53,7 +53,9 @@ const SignUp = ({ className }) => {
 
   return (
     <div className={`sign-up ${className}`}>
-      <h2 className="text-headline-medium">Don't have an account?</h2>
+      <h2 className="text-headline-small md:text-headline-medium">
+        Don't have an account?
+      </h2>
       <span className="mb-12 opacity-60">
         Sign Up with your email and password
       </span>
