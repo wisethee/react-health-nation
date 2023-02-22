@@ -6,7 +6,24 @@ import {
 } from "@react-three/drei";
 import { Fragment, Suspense } from "react";
 
+import Cell from "../../three/cell/cell";
+import Heart from "../../three/heart/heart";
+import Brain from "../../three/brain/brain";
+
 const Scene = ({ obj }) => {
+  const objMap = () => {
+    switch (obj) {
+      case "cell":
+        return <Cell />;
+      case "heart":
+        return <Heart />;
+      case "brain":
+        return <Brain />;
+      default:
+        return <Cell />;
+    }
+  };
+
   return (
     <Fragment>
       <Environment preset="dawn" />
@@ -27,7 +44,7 @@ const Scene = ({ obj }) => {
           config={{ mass: 2, tension: 400 }}
           snap={{ mass: 4, tension: 400 }}
         >
-          <Float rotationIntensity={0.9}>{obj}</Float>
+          <Float rotationIntensity={0.9}>{objMap()}</Float>
         </PresentationControls>
       </Suspense>
     </Fragment>
