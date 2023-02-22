@@ -9,6 +9,7 @@ import Auth from "./routes/auth/auth";
 import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
 import Donate from "./routes/donate/donate";
+import Animate from "./core/components/animate/animate"
 import Checkout from "./routes/checkout/checkout";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <Animate />
     </Fragment>
   );
 };
