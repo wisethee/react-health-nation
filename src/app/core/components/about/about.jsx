@@ -69,10 +69,7 @@ const About = ({ btnColor }) => {
             Who We Are, What We Do
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Quis viverra augue sit eros
-            at lacus dis egestas. Sit amet ultrices blandit vitae nunc
-            ullamcorper malesuada. Blandit imperdiet egestas non id. Augue
-            tempus volutpat erat mi nunc sed sem elementum.
+            We are a group of experienced professionals from the health and social care sectors. We got together to to set up Health Nation, born out of our concern about the increasing cost of disease. Each month we choose 3 of the biggest health issues facing our nation and highlight the work of two charities for each issue. For each issue you'll find one charity that supports people living with disease in paractiacl ways and one charity that funds basic research to advance our understanding of the disease. 
           </p>
         </div>
 

@@ -38,7 +38,7 @@ export const DATA = [
     title: "Heart Disease",
     obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.3, 0.3, -0.6]} />,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
+      "Heart disease is the second most costly disease with costs relating to heart and circulatory disease coming to around 9 billion per year. Over 5 million people are living with heart or circulatory disease; around 500 will die from a heart or circulatory disorder every day and over 100 of these will be under 75.",
     order: "order-last",
     btnColor: "secondary",
     headingSize: "h2",
@@ -49,7 +49,7 @@ export const DATA = [
         id: 6,
         title: "Heart Beat Buddies",
         description:
-          "Lorem ipsum dolor sit amet consectetur. Non morbi vel semper nec. Consectetur eget elit tincidunt quam consequat parturient. Dictumst lorem nullam viverra at nulla phasellus.",
+          "Heart Beat Buddies helps and supports people who have had cardiac arrests and strokes as they take steps back towards an active life. The charity pairs up people with a volunteer in a buddy scheme where the trained volunteer can provide support and advice on safe steps to become more active. People are shown how they can use heart health monitoring apps to track their progress.",
         startVal: "£64,000",
         endVal: "£99,000",
       },
@@ -57,7 +57,7 @@ export const DATA = [
         id: 7,
         title: "Heart Nation",
         description:
-          "Lorem ipsum dolor sit amet consectetur. Non morbi vel semper nec. Consectetur eget elit tincidunt quam consequat parturient. Dictumst lorem nullam viverra at nulla phasellus.",
+          "Heart Nation funds research into the use of new technologies in diagnosis and treatment of cardiac disease. For example, the use of AI in interpreting heart scans to promote early diagnosis and timely treatment of patients at risk of heart failure. The charity also funds research into the use of injectable heart monitors to see if having this continuous imformation on heart rhythm can provide insights as to how to intervene before a person’s health deteriorates to the point where they have a serious cardiac event.",
         startVal: "£24,000",
         endVal: "£99,000",
       },
