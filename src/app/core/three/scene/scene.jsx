@@ -14,13 +14,15 @@ const Scene = ({ obj }) => {
   const objMap = () => {
     switch (obj) {
       case "cell":
-        return <Cell />;
+        return <Cell position={[-0, -0, 0]} rotation={[-0.3, -1, -0.15]} />;
       case "heart":
-        return <Heart />;
+        return (
+          <Heart position={[-0.6, -0.4, 0]} rotation={[-0.3, 0.3, -0.6]} />
+        );
       case "brain":
-        return <Brain />;
+        return <Brain position={[0, -0.5, 0]} rotation={[-0.6, -0.3, -0.9]} />;
       default:
-        return <Cell />;
+        return <Cell position={[-0, -0, 0]} rotation={[-0.3, -1, -0.15]} />;
     }
   };
 
