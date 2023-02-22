@@ -12,10 +12,6 @@ export const CheckoutProvider = ({ children }) => {
     setCheckoutItem([{ ...itemToAdd }]);
   };
 
-  useEffect(() => {
-    console.log(checkoutItem);
-  }, [checkoutItem]);
-
   const value = { addItem, checkoutItem };
   return (
     <CheckoutContext.Provider value={value}>

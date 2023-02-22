@@ -15,9 +15,15 @@ const Donate = () => {
   const params = useParams();
   const { data } = useContext(DataContext);
 
+  const dataMap = Object.keys(data).map((key) => data[key]);
+
   const { addItem } = useContext(CheckoutContext);
 
-  const project = data.find((project) => project.id === parseInt(params.id));
+  const project = dataMap[0]?.find(
+    (project) => project.id === parseInt(params.id)
+  );
+
+  console.log(project);
 
   const addItemToCheckout = (id, amountVal) => {
     addItem({ ...project, charityId: id, amount: amountVal });
@@ -55,43 +61,49 @@ const Donate = () => {
 
   return (
     <Fragment>
-      <Cause cause={project} other={"hidden"} />
-      <Section height={"h-full"} padding={"py-20"}>
-        <div className="gap-12 columns-1 md:columns-2 md:flex md:items-end ">
-          {project.info.map(({ id, title, description, startVal, endVal }) => {
-            return (
-              <Info
-                key={id}
-                id={id}
-                btnColor={"secondary"}
-                infoTitle={title}
-                infoDescription={description}
-                startVal={startVal}
-                endVal={endVal}
-                handleOnClick={addItemToCheckout}
-              />
-            );
-          })}
-        </div>
-      </Section>
-      <Circle
-        customClass={"circle-light-green"}
-        right="0"
-        top="10%"
-        id={"circle1"}
-      />
-      <Circle
-        customClass={"circle-purple-fill"}
-        right="50%"
-        top="34%"
-        id={"circle2"}
-      />
-      <Circle
-        customClass={"circle-green-fill"}
-        right="calc(60% - 100px)"
-        top="calc(38% - 25px)"
-        id={"circle3"}
-      />
+      {project && (
+        <>
+          <Cause cause={project} other={"hidden"} />
+          <Section height={"h-full"} padding={"py-20"}>
+            <div className="gap-12 columns-1 md:columns-2 md:flex md:items-end ">
+              {project.info.map(
+                ({ id, title, description, startVal, endVal }) => {
+                  return (
+                    <Info
+                      key={id}
+                      id={id}
+                      btnColor={"secondary"}
+                      infoTitle={title}
+                      infoDescription={description}
+                      startVal={startVal}
+                      endVal={endVal}
+                      handleOnClick={addItemToCheckout}
+                    />
+                  );
+                }
+              )}
+            </div>
+          </Section>
+          <Circle
+            customClass={"circle-light-green"}
+            right="0"
+            top="10%"
+            id={"circle1"}
+          />
+          <Circle
+            customClass={"circle-purple-fill"}
+            right="50%"
+            top="34%"
+            id={"circle2"}
+          />
+          <Circle
+            customClass={"circle-green-fill"}
+            right="calc(60% - 100px)"
+            top="calc(38% - 25px)"
+            id={"circle3"}
+          />
+        </>
+      )}
     </Fragment>
   );
 };

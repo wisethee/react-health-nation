@@ -43,10 +43,12 @@ const Home = () => {
 
   return (
     <Fragment>
-      {data.map((cause) => {
-        const { id } = cause;
-        return <Cause key={id} cause={cause} />;
-      })}
+      {Object.keys(data).map((title) =>
+        data[title].map((cause) => {
+          const { id } = cause;
+          return <Cause key={id} cause={cause} />;
+        })
+      )}
       <About btnColor={"secondary"} />
       <Circle
         customClass={"circle-light-green"}
