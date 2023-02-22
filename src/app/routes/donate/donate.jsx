@@ -23,8 +23,6 @@ const Donate = () => {
     (project) => project.id === parseInt(params.id)
   );
 
-  console.log(project);
-
   const addItemToCheckout = (id, amountVal) => {
     addItem({ ...project, charityId: id, amount: amountVal });
   };
@@ -65,7 +63,7 @@ const Donate = () => {
         <>
           <Cause cause={project} other={"hidden"} />
           <Section height={"h-full"} padding={"py-20"}>
-            <div className="gap-12 columns-1 md:columns-2 md:flex md:items-end ">
+            <div className="gap-12 columns-1 md:columns-2 md:flex md:items-start ">
               {project.info.map(
                 ({ id, title, description, startVal, endVal }) => {
                   return (

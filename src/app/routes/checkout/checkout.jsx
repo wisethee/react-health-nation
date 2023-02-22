@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Section from "../../core/components/section/section";
@@ -22,6 +22,12 @@ const Checkout = () => {
     setShowModal(false);
     navigate("/");
   };
+
+  useEffect(() => {
+    if (checkoutItem.length === 0) {
+      navigate("/");
+    }
+  }, []);
 
   if (checkoutItem.length > 0) {
     return (
