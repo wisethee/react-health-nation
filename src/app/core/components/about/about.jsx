@@ -66,7 +66,7 @@ const About = ({ btnColor }) => {
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center md:items-start gap-12 order-1">
         <div className="flex flex-col justify-center text-center md:text-left md:gap-4">
           <h2 className="text-headline-medium md:text-display-small lg:text-display-medium mb-3">
-            Our team
+            Who We Are, What We Do
           </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur. Quis viverra augue sit eros
