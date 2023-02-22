@@ -15,15 +15,16 @@ export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
+  const batch = writeBatch(db);
   const collectionRef = collection(db, collectionKey);
 
-  const batch = writeBatch(db);
-  objectsToAdd.forEach((obj) => {
-    const newDocRef = doc(collectionRef, obj.title.toLowerCase());
-    batch.set(newDocRef, obj);
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.title.toLowerCase());
+    batch.set(docRef, object);
   });
 
-  return await batch.commit();
+  await batch.commit();
+  console.log("done");
 };
 
 export const createUserDocument = async (user, additionalInformation = {}) => {

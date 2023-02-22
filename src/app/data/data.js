@@ -1,7 +1,3 @@
-import Heart from "../core/three/heart/heart";
-import Cell from "../core/three/cell/cell";
-import Brain from "../core/three/brain/brain";
-
 export const DATA = [
   {
     title: "causes",
@@ -9,7 +5,7 @@ export const DATA = [
       {
         id: 1,
         title: "Diabetes",
-        obj: <Cell position={[-0, -0, 0]} rotation={[-0.3, -1, -0.15]} />,
+        obj: "cell",
         description:
           "Diabetes is the costliest disease for our nation's health budget, costing over 10 billion per year. There are two main types of diabetes, Type 1 where a person’s body cannot make insulin and Type 2 where the insulin made in not able to act effectively or not enough insulin gets made. Around 5 million people are living with diabetes 90% of whom have Type 2 diabetes, it's estimated another 1 million may be living with Type 2 diabetes but are undiagnosed.  The result of both Type1 and Type 2 diabetes is that the body cells cannot take up sugar so too much is left in the blood. If left uncontrolled high blood sugar can lead to other health complications affecting a person’s heart, circulatory system, kidneys, eyes and nerves. Around 80% of the cost of diabetes is spent in treating the complications.",
         order: "md:order-first",
@@ -39,7 +35,7 @@ export const DATA = [
       {
         id: 2,
         title: "Heart Disease",
-        obj: <Heart position={[-0.6, -0.4, 0]} rotation={[-0.3, 0.3, -0.6]} />,
+        obj: "heart",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
         order: "order-last",
@@ -69,7 +65,7 @@ export const DATA = [
       {
         id: 3,
         title: "Dementia and Alzheimer disease",
-        obj: <Brain position={[0, -0.5, 0]} rotation={[-0.6, -0.3, -0.9]} />,
+        obj: "brain",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis lectus nec erat fringilla dignissim. Maecenas sed mauris quis enim lobortis tincidunt vitae vitae est.",
         order: "md:order-first",
