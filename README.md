@@ -17,6 +17,7 @@ Application demo example
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Team](#team)
 
 ## Installation
 
@@ -54,3 +55,7 @@ If you would like to contribute to Health Nation, please open an issue or submit
 ## License
 
 This project is licensed under the terms of the [MIT license](LICENSE).
+
+## Team
+
+Kirsten Heslop, Adriana Paduraru, George Bizzell, Matthew Osborne, Marius Paduraru
