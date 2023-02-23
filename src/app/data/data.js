@@ -57,7 +57,7 @@ export const DATA = [
         id: 7,
         title: "Heart Nation",
         description:
-          "Heart Nation funds research into the use of new technologies in diagnosis and treatment of cardiac disease. For example, the use of AI in interpreting heart scans to promote early diagnosis and timely treatment of patients at risk of heart failure. The charity also funds research into the use of injectable heart monitors to see if having this continuous imformation on heart rhythm can provide insights as to how to intervene before a person’s health deteriorates to the point where they have a serious cardiac event.",
+          "Heart Nation funds research into the use of new technologies in diagnosis and treatment of cardiac disease. For example, the use of AI in interpreting heart scans to promote early diagnosis and timely treatment of patients at risk of heart failure. The charity also funds research into the use of injectable heart monitors to see if having this continuous information on heart rhythm can provide insights as to how to intervene before a person’s health deteriorates to the point where they have a serious cardiac event.",
         startVal: "£24,000",
         endVal: "£99,000",
       },
