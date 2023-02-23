@@ -1,6 +1,6 @@
 # Health Nation
 
-## Shot Project Description
+## Short Project Description
 
 Health Nation is a web application that helps users donate to charities that support the fight against Diabetes, Heart Disease, and Dementia/Alzheimer's Disease. The application is built using React and utilizes Three.js, Tailwindcss, and Firebase.
 
