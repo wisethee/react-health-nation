@@ -4,7 +4,6 @@ import Section from "../../core/components/section/section";
 import SignUp from "../../core/components/sign-up/sign-up";
 import SignIn from "../../core/components/sign-in/sign-in";
 import Circle from "../../core/components/circle/circle";
-import AppModal from "../../core/components/modal/modal.component"
 
 import "./auth.css";
 
