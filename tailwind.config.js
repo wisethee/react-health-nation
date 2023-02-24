@@ -36,6 +36,7 @@ module.exports = {
       "light-grey": "#F5F7F7",
       "light-orange": "#FFF4F2",
       "light-green": "#E8F7F8",
+      red: "#EF4444"
     },
     fontSize: {
       "body-small": [
