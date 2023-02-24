@@ -51,7 +51,7 @@ const SignIn = ({ className }) => {
           setModalMessage("Wrong username!");
           break;
         default:
-          alert("Something went wrong :(");
+          setModalMessage("Enter user details");
           break;
       }
     }
