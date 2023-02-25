@@ -66,6 +66,7 @@ const SignIn = ({ className }) => {
       <AppModal show={modalMessage ? true : false} close = {handleCloseModal}> {modalMessage} </AppModal>
 
       <h2 className="text-headline-medium">Already have an account?</h2>
+
       <span className="mb-12 opacity-60">
         Sign In with your email and password
       </span>

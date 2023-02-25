@@ -136,17 +136,17 @@ module.exports = {
         },
       ],
       "display-small": [
-        "3.625rem",
+        "3.5rem",
         {
-          lineHeight: "4.125rem",
+          lineHeight: "4rem",
           letterSpacing: "0",
           fontWeight: "700",
         },
       ],
       "display-medium": [
-        "3.5rem",
+        "3.625rem",
         {
-          lineHeight: "4rem",
+          lineHeight: "4.125rem",
           letterSpacing: "0",
           fontWeight: "700",
         },

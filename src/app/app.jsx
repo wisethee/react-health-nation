@@ -9,6 +9,7 @@ import Auth from "./routes/auth/auth";
 import NotFound from "./routes/not-found/not-found";
 import Home from "./routes/home/home";
 import Donate from "./routes/donate/donate";
+// import Animate from "./core/components/animate/animate"
 import Checkout from "./routes/checkout/checkout";
 import AppModal from "./core/components/modal/modal.component";
 
@@ -28,7 +29,7 @@ const App = () => {
       </Routes>
 
       <Footer />
-      <AppModal/>
+      {/* <Animate /> */}
     </Fragment>
   );
 };

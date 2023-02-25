@@ -16,6 +16,16 @@ const Header = () => {
     await signOutAuthUser();
     navigate("/");
   };
+  // const app = useRef()
+  // useLayoutEffect(()=> {
+  //   let ctx = gsap.context(() => {
+  //     // use scoped selectors
+  //     let tl = gsap.timeline()
+  //     tl.from(".logo", { duration: 2, x:-200, ease: "power1.out" })
+  //     tl.from(".logo", {duration:1, opacity: 0.2})
+  //   }, app);
+  //   return () => ctx.revert()
+  // }, []) 
 
   return (
     <header className="header main flex flex-col px-4 md:px-8 lg:px-12 xl:px-16">
