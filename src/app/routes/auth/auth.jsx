@@ -7,6 +7,8 @@ import Circle from "../../core/components/circle/circle";
 
 import "./auth.css";
 
+
+
 const Auth = () => {
   useEffect(() => {
     gsap.to("#circle1", {
@@ -34,7 +36,7 @@ const Auth = () => {
       bgClass={"charity1-bg"}
       name={"auth"}
     >
-      <div className="flex flex-col w-full md:flex-row flex-nowrap gap-24 md:gap-12">
+      <div id="app-modal" className="flex flex-col w-full md:flex-row flex-nowrap gap-24 md:gap-12">
         <SignUp className="flex flex-col w-full md:w-1/2" />
         <SignIn className={"flex flex-col w-full md:w-1/2"} />
       </div>

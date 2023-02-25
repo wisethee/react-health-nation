@@ -4,6 +4,8 @@ import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/auth.fi
 
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
+import AppModal from "../modal/modal.component"
+
 
 // default form fields values
 const defaultFormFields = {
@@ -26,6 +28,13 @@ const SignIn = ({ className }) => {
     setFormFields(defaultFormFields);
   };
 
+  const [modalMessage, setModal] = useState(undefined);
+
+  const handleCloseModal = () => setModal(undefined);
+
+  const setModalMessage = (message) => setModal(message);
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -36,25 +45,28 @@ const SignIn = ({ className }) => {
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
-          // TODO: add modal
-          alert("Wrong password.");
+          setModalMessage("Wrong password!");
           break;
         case "auth/user-not-found":
-          // TODO: add modal
-          alert("User not found.");
+          setModalMessage("Wrong username!");
           break;
         default:
-          alert("Something went wrong.");
+          setModalMessage("Enter user details");
           break;
       }
     }
   };
 
+
   return (
     <div className={`sign-up ${className}`}>
-      <h2 className="text-headline-small md:text-headline-medium">
-        Already have an account?
-      </h2>
+
+      {/* Check if the modalMessage is defined, then true, otherwise, false */}
+
+      <AppModal show={modalMessage ? true : false} close = {handleCloseModal}> {modalMessage} </AppModal>
+
+      <h2 className="text-headline-medium">Already have an account?</h2>
+
       <span className="mb-12 opacity-60">
         Sign In with your email and password
       </span>
